@@ -1,7 +1,15 @@
-// import logo from './logo.svg';
 import './App.css';
+import React, { useState } from 'react';
 
 function App() {
+  const [backendMessage, setBackendMessage] = useState('');
+  
+  const fetchMessage = async () => {
+    const res = await fetch('http://localhost:5000/api/message');
+    const data = await res.json();
+    setBackendMessage(data.message);
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -11,7 +19,11 @@ function App() {
       <main>
         <section>
           <h2>About This App</h2>
-          <p>This app is a showcase of my React framework proficiency.</p>
+          <p>This app showcases my technical skills.</p>
+        </section>
+        <section>
+          <button onClick={fetchMessage}>Get Backend Message</button>
+          {backendMessage && <p>Backend says: {backendMessage}</p>}
         </section>
       </main>
       <footer className="App-footer">
