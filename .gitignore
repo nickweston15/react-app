@@ -25,4 +25,4 @@ yarn-error.log*
 # mine
 ideas.txt
 .env
-./server.env
+/server/.env
