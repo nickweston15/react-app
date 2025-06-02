@@ -1,5 +1,6 @@
 import './assets/App.css';
 import ServerButton from './components/ServerButton.js';
+import FileUpload from './components/FileUpload.js';
 
 function App() {
   return (
@@ -15,6 +16,10 @@ function App() {
         </section>
         <section>
           <ServerButton />
+        </section>
+        <section>
+          <h2>Upload a File to S3</h2>
+          <FileUpload />
         </section>
       </main>
       <footer className="App-footer">
