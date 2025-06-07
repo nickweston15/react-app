@@ -6,24 +6,20 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Nick's React App</h1>
-        <p>This is a simple React application.</p>
+        <h1>Let's Build Something Cool</h1>
       </header>
-      <main>
+      <main className="App-main">
         <section>
-          <h2>About This App</h2>
-          <p>This app showcases my technical skills.</p>
-        </section>
-        <section>
+          <h2>REST API Example: Get message from backend Node.js server</h2>
           <ServerButton />
         </section>
         <section>
-          <h2>Upload a File to S3</h2>
+          <h2>Webhook & Cloud Example: Upload a File to an AWS S3 bucket</h2>
           <FileUpload />
         </section>
       </main>
       <footer className="App-footer">
-        <p>"If you build it, they will come". </p>
+        <p>Built by Nick Weston, 2025 &reg;</p>
       </footer>
     </div>
   );
